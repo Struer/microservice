@@ -29,6 +29,7 @@ import java.util.concurrent.TimeUnit;
  */
 public abstract class LoginFilter implements Filter {
 
+    // 利用guava实现缓存
     private static Cache<String, UserDTO> cache =
             CacheBuilder.newBuilder().maximumSize(10000)
             .expireAfterWrite(3, TimeUnit.MINUTES).build();
@@ -54,7 +55,7 @@ public abstract class LoginFilter implements Filter {
                 }
             }
         }
-
+        // 先从缓存中获取，如果没有再远程请求服务
         UserDTO userDTO = null;
         if(StringUtils.isNotBlank(token)) {
             userDTO = cache.getIfPresent(token);
