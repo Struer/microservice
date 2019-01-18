@@ -13,10 +13,10 @@ import java.util.List;
  * Created by Michael on 2017/10/28.
  */
 @SpringBootApplication
-public class ServiceApplication {
+public class CourseEdgeServiceApplication {
 
     public static void main(String args[]) {
-        SpringApplication.run(ServiceApplication.class, args);
+        SpringApplication.run(CourseEdgeServiceApplication.class, args);
     }
 
     @Bean

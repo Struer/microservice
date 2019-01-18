@@ -22,6 +22,7 @@ public class CourseController {
     @Reference
     private ICourseService courseService;
 
+    // http://127.0.0.1:8081/course/courseList?token=jlrszlv19vhm8tajdgkz4q6xsm00g4b9
     @RequestMapping(value = "/courseList", method = RequestMethod.GET)
     @ResponseBody
     public List<CourseDTO> courseList(HttpServletRequest request) {
