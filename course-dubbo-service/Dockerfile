@@ -1,5 +1,5 @@
 FROM mini1/micro-service/openjdk:7-jre
-MAINTAINER xxx xxx@imooc.com
+MAINTAINER Struer jerry96868@gmail.com
 
 COPY target/course-dubbo-service-1.0-SNAPSHOT.jar /course-service.jar
 

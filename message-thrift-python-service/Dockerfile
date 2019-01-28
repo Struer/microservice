@@ -1,5 +1,5 @@
 FROM mini1/micro-service/python-base:latest
-MAINTAINER xxx xxx@imooc.com
+MAINTAINER Struer jerry96868@gmail.com
 
 ENV PYTHONPATH /
 COPY message /message

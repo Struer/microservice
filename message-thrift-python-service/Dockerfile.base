@@ -1,4 +1,4 @@
 FROM mini1/micro-service/python:3.6
-MAINTAINER xxx xxx@imooc.com
+MAINTAINER Struer jerry96868@gmail.com
 
 RUN pip install thrift
