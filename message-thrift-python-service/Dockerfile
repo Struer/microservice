@@ -1,4 +1,4 @@
-FROM mini1/micro-service/python-base:latest
+FROM hub.mydocker.com/micro-service/python-base:latest
 MAINTAINER Struer jerry96868@gmail.com
 
 ENV PYTHONPATH /

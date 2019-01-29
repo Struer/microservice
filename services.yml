@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   message-service:
-    image: mini1/micro-service/message-service:latest
+    image: hub.mydocker.com/micro-service/message-service:latest
     deploy:
       endpoint_mode: dnsrr
       resources:
@@ -10,7 +10,7 @@ services:
           memory: "128M"
 
   user-service:
-    image: mini1/micro-service/user-service:latest
+    image: hub.mydocker.com/micro-service/user-service:latest
     deploy:
       endpoint_mode: dnsrr
       resources:
@@ -19,7 +19,7 @@ services:
           memory: "512M"
 
   user-edge-service:
-    image: mini1/micro-service/user-edge-service:latest
+    image: hub.mydocker.com/micro-service/user-edge-service:latest
     deploy:
       endpoint_mode: vip
       resources:
@@ -33,7 +33,7 @@ services:
       - message-service
 
   course-service:
-    image: mini1/micro-service/course-service:latest
+    image: hub.mydocker.com/micro-service/course-service:latest
     deploy:
       endpoint_mode: dnsrr
       resources:
@@ -44,7 +44,7 @@ services:
       - user-service
 
   course-edge-service:
-    image: mini1/micro-service/course-edge-service:latest
+    image: hub.mydocker.com/micro-service/course-edge-service:latest
     deploy:
       endpoint_mode: vip
       resources:
@@ -56,7 +56,7 @@ services:
     depends_on:
       - user-edge-service
   api-gateway:
-    image: mini1/micro-service/api-gateway-zuul:latest
+    image: hub.mydocker.com/micro-service/api-gateway-zuul:latest
     deploy:
       endpoint_mode: vip
       resources:
